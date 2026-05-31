@@ -18,6 +18,7 @@ public class App {
             case 1:
                 Sistema_Login();
                 break;
+                //agregar mas case para los demas ejercicios 
             default:
                 System.out.println("Ingrese Una Opcion Valida");
         }
@@ -42,6 +43,7 @@ public class App {
             System.out.println("Acceso Denegdado");
         }
     }
+    //Cada ejercicio crean en una nueva funcion
     
    
             
