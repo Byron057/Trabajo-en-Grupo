@@ -13,6 +13,7 @@ public class App {
         System.out.println("Menu de Opciones");
         System.out.println("1. Validar Contraseña");
         System.out.println("2. Calcular Edad");
+        System.out.println("3. Generar Contraseña Aleatoria");
         System.out.println("Ingrese una Opcion");
         int opc = sc.nextInt();
         switch (opc){
@@ -21,6 +22,9 @@ public class App {
                 break;
             case 2:
                 Calcular_Edad();
+                break;
+            case 3:
+                Generar_Contrasena();
                 break;
                 //agregar mas case para los demas ejercicios 
             default:
@@ -69,6 +73,17 @@ public class App {
         
         System.out.println("Su edad es: " + edad + "años" );
     }
-    
+
+    public static void Generar_Contrasena(){
+    String caracteres = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789";
+    String contrasena = "";
+
+    for(int i = 0; i < 10; i++){
+        int indice = (int)(Math.random() * caracteres.length());
+        contrasena += caracteres.charAt(indice);
+        }
+
+    System.out.println("Contraseña generada: " + contrasena);
+    }
 
 }
