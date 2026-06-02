@@ -12,11 +12,15 @@ public class App {
         Scanner sc = new Scanner(System.in);
         System.out.println("Menu de Opciones");
         System.out.println("1. Validar Contraseña");
+        System.out.println("2. Calcular Edad");
         System.out.println("Ingrese una Opcion");
         int opc = sc.nextInt();
         switch (opc){
             case 1:
                 Sistema_Login();
+                break;
+            case 2:
+                Calcular_Edad();
                 break;
                 //agregar mas case para los demas ejercicios 
             default:
@@ -45,9 +49,26 @@ public class App {
     }
     //Cada ejercicio crean en una nueva funcion
     
-   
-            
-            
-      
-   
+    public static void Calcular_Edad(){
+        Scanner sc = new Scanner(System.in);
+        
+        System.out.println("Ingrese su año de nacimiento:");
+        int anioNacimiento = sc.nextInt();
+        
+        System.out.println("Ingrese su mes de nacimiento:");
+        int mesNacimiento = sc.nextInt();
+        
+        int anioActual = 2026;
+        int mesActual = 6;
+        
+        int edad = anioActual - anioNacimiento;
+        
+        if(mesNacimiento > mesActual){
+            edad--;
+        }
+        
+        System.out.println("Su edad es: " + edad + "años" );
+    }
+    
+
 }
