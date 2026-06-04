@@ -47,10 +47,15 @@ public class App {
                 break;
             case  8:
                 hola();
+            case 9:
+                tabla();
             default:
                 System.out.println("Ingrese Una Opcion Valida");
         }
         
+    }
+    public static void tabla(){
+        System.out.println("Hola mundo2");
     }
     public static void hola(){
         System.out.println("Hola mundo");
