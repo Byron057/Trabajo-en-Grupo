@@ -76,9 +76,9 @@ public class App {
         System.out.println("Ingrese su año de nacimiento:");
         System.out.println("hola");  
         int anioNacimiento = sc.nextInt();
-        System.out.println("alex haces huevadas la plena hermano");
+        System.out.println("alex haces todo mal la plena hermano");
         System.out.println("jajajaja");
-        System.out.println("nunca mas hagamos grupo con ese tonto del sheen");
+        System.out.println("nunca mas hagamos grupo con el alex");
         
         System.out.println("Ingrese su mes de nacimiento:");
         int mesNacimiento = sc.nextInt();
@@ -145,50 +145,7 @@ public class App {
             System.out.println("\nHas vivido aproximadamente: " + diasVividos + " días");
             
             scanner.close();
+             
         }
     //Generar una contraseña personalizada
-    public static void GenerarContrasenaPersonalizada() {
-        Scanner sc = new Scanner(System.in);
-        
-        System.out.print("Longitud de la contraseña (8-20): ");
-        int longitud = sc.nextInt();
-        if(longitud < 8) longitud = 8;
-        if(longitud > 20) longitud = 20;
-        
-        System.out.print("¿Incluir números? (si/no): ");
-        boolean numeros = sc.next().equalsIgnoreCase("si");
-        
-        System.out.print("¿Incluir símbolos? (si/no): ");
-        boolean simbolos = sc.next().equalsIgnoreCase("si");
-        
-        String base = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz";
-        if(numeros) base += "0123456789";
-        if(simbolos) base += "!@#$%^&*()_+-=";
-        
-        String contrasena = "";
-        for(int i = 0; i < longitud; i++){
-            int indice = (int)(Math.random() * base.length());
-            contrasena += base.charAt(indice);
-        }
-        
-        System.out.println("Contraseña generada: " + contrasena);
-    }
-
-    public static void CalculadoraBasica() {
-        Scanner sc = new Scanner(System.in);
-        System.out.print("Primer número: ");
-        double a = sc.nextDouble();
-        System.out.print("Segundo número: ");
-        double b = sc.nextDouble();
-        
-        System.out.println("1.Sumar  2.Restar  3.Multiplicar  4.Dividir");
-        int op = sc.nextInt();
-        
-        if(op == 1) System.out.println("Resultado: " + (a + b));
-        else if(op == 2) System.out.println("Resultado: " + (a - b));
-        else if(op == 3) System.out.println("Resultado: " + (a * b));
-        else if(op == 4) {
-            if(b != 0) System.out.println("Resultado: " + (a / b));
-            else System.out.println("No se puede dividir por cero");
-        }
-}
+    
