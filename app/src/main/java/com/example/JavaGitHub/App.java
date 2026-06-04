@@ -66,6 +66,7 @@ public class App {
         Scanner sc = new Scanner(System.in);
         
         System.out.println("Ingrese su año de nacimiento:");
+        System.out.println("hola");  
         int anioNacimiento = sc.nextInt();
         
         System.out.println("Ingrese su mes de nacimiento:");
@@ -131,6 +132,7 @@ public class App {
             int diasVividos = anosVividos * 365 + (mes - 1) * 30 + dia;
 
             System.out.println("\nHas vivido aproximadamente: " + diasVividos + " días");
-
+            
             scanner.close();
         }
+        
