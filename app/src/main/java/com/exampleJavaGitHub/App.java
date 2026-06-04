@@ -19,6 +19,7 @@ public class App {
         System.out.println("6. Generar Contraseña Personalizada");
         System.out.println("7. Calculadora Básica");
         System.out.println("8 Hola mundo");
+        System.out.println("9 Tabla");
         System.out.println("Ingrese una Opcion");
         
         int opc = sc.nextInt();
@@ -55,8 +56,21 @@ public class App {
         
     }
     public static void tabla(){
-        System.out.println("Hola mundo2");
+        // Cambia este número por el que quieras calcular
+        int numero = 7;
+        System.out.println("=============================");
+        System.out.println("  TABLA DE MULTIPLICAR DEL " + numero);
+        System.out.println("=============================");
+        
+        // El bucle for va del 1 al 10
+        for (int i = 1; i <= 10; i++) {
+            int resultado = numero * i;
+            System.out.println(numero + " x " + i + " = " + resultado);
+        }
+        
+        System.out.println("=============================");
     }
+    
     public static void hola(){
         System.out.println("Hola mundo");
     }
