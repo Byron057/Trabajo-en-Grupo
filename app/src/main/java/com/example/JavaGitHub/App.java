@@ -16,6 +16,7 @@ public class App {
         System.out.println("3. Generar Contraseña Aleatoria");
         System.out.println("4. Determinar si un numero es PAR o IMPAR");
         System.out.println("5. Calculadora Dias de Vida");
+        System.out.println("6. Generar Contraseña Personalizada");
         System.out.println("Ingrese una Opcion");
         
         int opc = sc.nextInt();
@@ -35,6 +36,9 @@ public class App {
                 break;
             case 5:
                 CalculadoraDiasVida();
+                break;
+            case 9: 
+                GenerarContrasenaPersonalizada(); 
                 break;
             default:
                 System.out.println("Ingrese Una Opcion Valida");
@@ -137,4 +141,30 @@ public class App {
             
             scanner.close();
         }
+    public static void GenerarContrasenaPersonalizada() {
+        Scanner sc = new Scanner(System.in);
         
+        System.out.print("Longitud de la contraseña (8-20): ");
+        int longitud = sc.nextInt();
+        if(longitud < 8) longitud = 8;
+        if(longitud > 20) longitud = 20;
+        
+        System.out.print("¿Incluir números? (si/no): ");
+        boolean numeros = sc.next().equalsIgnoreCase("si");
+        
+        System.out.print("¿Incluir símbolos? (si/no): ");
+        boolean simbolos = sc.next().equalsIgnoreCase("si");
+        
+        String base = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz";
+        if(numeros) base += "0123456789";
+        if(simbolos) base += "!@#$%^&*()_+-=";
+        
+        String contrasena = "";
+        for(int i = 0; i < longitud; i++){
+            int indice = (int)(Math.random() * base.length());
+            contrasena += base.charAt(indice);
+        }
+        
+        System.out.println("Contraseña generada: " + contrasena);
+    }
+}
