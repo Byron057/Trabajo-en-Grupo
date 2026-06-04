@@ -18,7 +18,6 @@ public class App {
         System.out.println("5. Calculadora Dias de Vida");
         System.out.println("6. Generar Contraseña Personalizada");
         System.out.println("7. Calculadora Básica");
-        System.out.println("6. Calculadora Básica");
         System.out.println("Ingrese una Opcion");
         
         int opc = sc.nextInt();
@@ -180,15 +179,29 @@ public class App {
         System.out.println("1.Sumar  2.Restar  3.Multiplicar  4.Dividir");
         int op = sc.nextInt();
         
-        if(op == 1) System.out.println("Resultado: " + (a + b));
-        else if(op == 2) System.out.println("Resultado: " + (a - b));
-        else if(op == 3) System.out.println("Resultado: " + (a * b));
-        else if(op == 4) {
-            if(b != 0) System.out.println("Resultado: " + (a / b));
-            else System.out.println("No se puede dividir por cero");
+        switch (op) {
+            case 1:
+                System.out.println("Resultado: " + (a + b));
+                break;
+            case 2:
+                System.out.println("Resultado: " + (a - b));
+                break;
+            case 3:
+                System.out.println("Resultado: " + (a * b));
+                break;
+            case 4:
+                if (b != 0) {
+                    System.out.println("Resultado: " + (a / b));
+                } else {
+                    System.out.println("No se puede dividir por cero");
+                }    break;
+            default:
+                System.out.println("Opción no válida");
+                break;
+        }
         }
 }
-}
+
 
 
 
