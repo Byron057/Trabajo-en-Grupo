@@ -70,6 +70,7 @@ public class App {
         int anioNacimiento = sc.nextInt();
         System.out.println("alex haces huevadas la plena hermano");
         System.out.println("jajajaja");
+        System.out.println("nunca mas hagamos grupo con ese tonto del sheen");
         
         System.out.println("Ingrese su mes de nacimiento:");
         int mesNacimiento = sc.nextInt();
