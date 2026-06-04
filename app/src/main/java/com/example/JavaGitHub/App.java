@@ -106,3 +106,26 @@ public class App {
         } 
 
 }
+
+
+    public static void  CalculadoraDiasVida() {
+
+            Scanner scanner = new Scanner(System.in);
+
+            System.out.print("Ingresa tu año de nacimiento: ");
+            int ano = scanner.nextInt();
+
+            System.out.print("Ingresa tu mes de nacimiento (1-12): ");
+            int mes = scanner.nextInt();
+
+            System.out.print("Ingresa tu día de nacimiento: ");
+            int dia = scanner.nextInt();
+
+            // Días aprox. por año y mes
+            int anosVividos = 2026 - ano;
+            int diasVividos = anosVividos * 365 + (mes - 1) * 30 + dia;
+
+            System.out.println("\nHas vivido aproximadamente: " + diasVividos + " días");
+
+            scanner.close();
+        }
