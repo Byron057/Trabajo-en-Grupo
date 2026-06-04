@@ -121,11 +121,7 @@ public class App {
         }
             
         } 
-
-}
-
-
-    public static void  CalculadoraDiasVida() {
+            public static void  CalculadoraDiasVida() {
 
             Scanner scanner = new Scanner(System.in);
 
@@ -192,3 +188,7 @@ public class App {
             else System.out.println("No se puede dividir por cero");
         }
 }
+}
+
+
+
