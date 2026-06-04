@@ -14,6 +14,7 @@ public class App {
         System.out.println("1. Validar Contraseña");
         System.out.println("2. Calcular Edad");
         System.out.println("3. Generar Contraseña Aleatoria");
+        System.out.println("4. Determinar si un numero es PAR o IMPAR");
         System.out.println("Ingrese una Opcion");
         int opc = sc.nextInt();
         switch (opc){
@@ -27,6 +28,9 @@ public class App {
                 Generar_Contrasena();
                 break;
                 //agregar mas case para los demas ejercicios 
+            case 4:
+                par_impar();
+                break;
             default:
                 System.out.println("Ingrese Una Opcion Valida");
         }
@@ -85,5 +89,20 @@ public class App {
 
         System.out.println("Contraseña generada: " + contrasena);
     }
+        public static void par_impar() {
+        
+        Scanner sc = new Scanner(System.in);
+        //SI UN NUMERO ES IMPAR O PAR
+        System.out.println("===============");
+        System.out.println("PAR O IMPAR");
+        System.out.println("Ingresa el NUMERO ");
+        int numero= sc.nextInt();
+       if (numero % 2 == 0) {
+            System.out.println("El numero es par");
+        } else {
+            System.out.println("El numero es impar");
+        }
+            
+        } 
 
 }
