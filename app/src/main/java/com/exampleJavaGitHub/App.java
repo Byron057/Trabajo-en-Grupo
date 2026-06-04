@@ -18,6 +18,7 @@ public class App {
         System.out.println("5. Calculadora Dias de Vida");
         System.out.println("6. Generar Contraseña Personalizada");
         System.out.println("7. Calculadora Básica");
+        System.out.println("8 Hola mundo");
         System.out.println("Ingrese una Opcion");
         
         int opc = sc.nextInt();
@@ -44,10 +45,15 @@ public class App {
             case 7: 
                 CalculadoraBasica(); 
                 break;
+            case  8:
+                hola();
             default:
                 System.out.println("Ingrese Una Opcion Valida");
         }
         
+    }
+    public static void hola(){
+        System.out.println("Hola mundo");
     }
     public static void Sistema_Login(){
         Scanner sc= new Scanner(System.in);
