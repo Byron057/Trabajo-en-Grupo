@@ -15,7 +15,9 @@ public class App {
         System.out.println("2. Calcular Edad");
         System.out.println("3. Generar Contraseña Aleatoria");
         System.out.println("4. Determinar si un numero es PAR o IMPAR");
+        System.out.println("5. Calculadora Dias de Vida");
         System.out.println("Ingrese una Opcion");
+        
         int opc = sc.nextInt();
         switch (opc){
             case 1:
@@ -30,6 +32,9 @@ public class App {
                 //agregar mas case para los demas ejercicios 
             case 4:
                 par_impar();
+                break;
+            case 5:
+                CalculadoraDiasVida();
                 break;
             default:
                 System.out.println("Ingrese Una Opcion Valida");
