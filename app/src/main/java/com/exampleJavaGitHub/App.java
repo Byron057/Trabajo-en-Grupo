@@ -9,6 +9,8 @@ import java.util.Scanner;
 public class App {
 
     public static void main(String[] args) {
+        System.out.println("algoritmo para cambiar el usuario y la contraseña con  confirmacion con ciclo while y con 3 intentos");
+        System.out.println("el cambio debe hacer el sr achote");
         Scanner sc = new Scanner(System.in);
         System.out.println("Menu de Opciones");
         System.out.println("1. Validar Contraseña");
