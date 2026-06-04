@@ -73,12 +73,12 @@ public class App {
     public static void Calcular_Edad(){
         Scanner sc = new Scanner(System.in);
         
-        System.out.println("Ingrese su año de nacimiento:");
-        System.out.println("hola");  
+        System.out.println("=======================================");
+        System.out.println("Ingrese su año de nacimiento:)");
         int anioNacimiento = sc.nextInt();
-        System.out.println("alex haces todo mal la plena hermano");
-        System.out.println("jajajaja");
-        System.out.println("nunca mas hagamos grupo con el alex");
+        System.out.println("=======================================");
+        System.out.println("=======================================");
+        System.out.println("muy bien");
         
         System.out.println("Ingrese su mes de nacimiento:");
         int mesNacimiento = sc.nextInt();
