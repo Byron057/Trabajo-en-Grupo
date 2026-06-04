@@ -57,6 +57,50 @@ public class App {
         }
         
     }
+    public static void Sistema_Login() {
+        Scanner sc = new Scanner(System.in);
+        String usuario_valido = "Admin123";
+        String contraseña_valida = "Trabajo3105";
+
+        int intentosUsuario = 3;
+        int intentosContraseña = 3;
+
+        while (intentosUsuario > 0) {
+            System.out.println("Ingrese el nombre de Usuario");
+            String usuario = sc.nextLine();
+
+            if (usuario.equals(usuario_valido)) {
+                break; 
+            } else {
+                intentosUsuario--;
+                if (intentosUsuario > 0) {
+                    System.out.println("El ususario es incorrecto. Quedan " + intentosUsuario + " intentos.");
+                }
+            }
+        }
+        if (intentosUsuario == 0) {
+            System.out.println("Acceso no permitido . Se a terminado todos los intentos  .");
+            return;
+        }
+
+        while (intentosContraseña > 0) {
+            System.out.println("Ingrese la Contraseña");
+            String contraseña = sc.nextLine();
+
+            if (contraseña.equals(contraseña_valida)) {
+                System.out.println("Acceso Concedido ");
+                return; 
+            } else {
+                intentosContraseña--;
+                if (intentosContraseña > 0) {
+                    System.out.println("Contraseña incorrecta. Te quedan " + intentosContraseña + " intentos.");
+                }
+            }
+        }
+        if (intentosContraseña == 0) {
+            System.out.println("Acceso no permitido . Intentos de contraseña agotados.");
+       }
+}
     public static void tabla(){
         // Cambia este número por el que quieras calcular
         int numero = 7;
@@ -75,25 +119,6 @@ public class App {
     
     public static void hola(){
         System.out.println("Hola mundo");
-    }
-    public static void Sistema_Login(){
-        Scanner sc= new Scanner(System.in);
-        String contraseña_valida = "Trabajo3105";
-        int intentos = 3;
-        while(intentos > 0){
-            System.out.println("Ingrese la Contraseña");
-            String contraseña = sc.nextLine();
-            if (!contraseña.equals(contraseña_valida)) {
-                intentos = intentos - 1 ;
-            }
-            else{
-                System.out.println("Acceso Permitido");
-                break;
-            }
-        }
-        if (intentos == 0) {
-            System.out.println("Acceso Denegdado");
-        }
     }
     //Cada ejercicio crean en una nueva funcion
     
@@ -171,6 +196,10 @@ public class App {
             scanner.close();
         }
     //Generar una contraseña personalizada
+
+    /**
+     *
+     */
     public static void GenerarContrasenaPersonalizada() {
         Scanner sc = new Scanner(System.in);
         
