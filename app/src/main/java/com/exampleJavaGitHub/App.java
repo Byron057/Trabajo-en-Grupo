@@ -141,6 +141,7 @@ public class App {
 
             System.out.print("Ingresa tu mes de nacimiento (1-12): ");
             int mes = scanner.nextInt();
+                System.out.println("hola mundo");
 
             System.out.print("Ingresa tu día de nacimiento: ");
             int dia = scanner.nextInt();
