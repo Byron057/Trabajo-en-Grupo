@@ -17,6 +17,7 @@ public class App {
         System.out.println("4. Determinar si un numero es PAR o IMPAR");
         System.out.println("5. Calculadora Dias de Vida");
         System.out.println("6. Generar Contraseña Personalizada");
+        System.out.println("6. Calculadora Básica");
         System.out.println("Ingrese una Opcion");
         
         int opc = sc.nextInt();
@@ -37,8 +38,11 @@ public class App {
             case 5:
                 CalculadoraDiasVida();
                 break;
-            case 9: 
+            case 6: 
                 GenerarContrasenaPersonalizada(); 
+                break;
+            case 7: 
+                CalculadoraBasica(); 
                 break;
             default:
                 System.out.println("Ingrese Una Opcion Valida");
@@ -142,6 +146,7 @@ public class App {
             
             scanner.close();
         }
+    //Generar una contraseña personalizada
     public static void GenerarContrasenaPersonalizada() {
         Scanner sc = new Scanner(System.in);
         
@@ -168,4 +173,22 @@ public class App {
         
         System.out.println("Contraseña generada: " + contrasena);
     }
+
+    public static void CalculadoraBasica() {
+        Scanner sc = new Scanner(System.in);
+        System.out.print("Primer número: ");
+        double a = sc.nextDouble();
+        System.out.print("Segundo número: ");
+        double b = sc.nextDouble();
+        
+        System.out.println("1.Sumar  2.Restar  3.Multiplicar  4.Dividir");
+        int op = sc.nextInt();
+        
+        if(op == 1) System.out.println("Resultado: " + (a + b));
+        else if(op == 2) System.out.println("Resultado: " + (a - b));
+        else if(op == 3) System.out.println("Resultado: " + (a * b));
+        else if(op == 4) {
+            if(b != 0) System.out.println("Resultado: " + (a / b));
+            else System.out.println("No se puede dividir por cero");
+        }
 }
