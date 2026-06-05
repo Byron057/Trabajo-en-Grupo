@@ -178,6 +178,7 @@ public class App {
             System.out.print("Ingresa tu año de nacimiento: ");
             int ano = scanner.nextInt();
             System.out.println("hola mundo");
+            System.out.println("Hola byron ");
 
             System.out.print("Ingresa tu mes de nacimiento (1-12): ");
             int mes = scanner.nextInt();
