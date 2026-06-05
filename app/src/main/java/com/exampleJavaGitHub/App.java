@@ -102,19 +102,18 @@ public class App {
        }
 }
     public static void tabla(){
-        // Cambia este número por el que quieras calcular
-        int numero = 7;
-        System.out.println("=============================");
-        System.out.println("  TABLA DE MULTIPLICAR DEL " + numero);
-        System.out.println("=============================");
-        
-        // El bucle for va del 1 al 10
-        for (int i = 1; i <= 10; i++) {
-            int resultado = numero * i;
-            System.out.println(numero + " x " + i + " = " + resultado);
-        }
-        
-        System.out.println("=============================");
+            Scanner sc = new Scanner(System.in);
+     //TABLA DE MULTIPLICAR
+     System.out.println("===============");
+     System.out.println("TRABLA DE MULTIPLICAR");
+     System.out.println("Ingresa el numero de la tabla a mostrar: ");
+     int num= sc.nextInt();
+     System.out.println("\nTabla de multiplicar del " + num + ":");
+     for (int i = 1; i <= 10; i++) {
+     int resultado = num * i;
+     System.out.println(num + " x " + i + " = " + resultado);
+     } 
+
     }
     
     public static void hola(){
